@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { ArrowRight, Clock, Heart, Keyboard, Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { publicUrl } from "@/lib/public-url";
 import { useGame } from "@/lib/game/store";
 
 const INTRO_LINES = [
@@ -50,7 +51,7 @@ function IntroAvatar() {
       <div className="relative overflow-hidden rounded-[28px] border border-border bg-fg shadow-[0_18px_40px_rgba(42,50,40,0.08)]">
         {reduced ? (
           <img
-            src="/avatars/intro.jpg"
+            src={publicUrl("/avatars/intro.jpg")}
             alt="Marcelo, Key User"
             className="mx-auto max-h-[36vh] w-full object-cover object-[50%_12%] sm:max-h-[46vh] lg:max-h-[62vh]"
           />
@@ -58,7 +59,7 @@ function IntroAvatar() {
           <video
             ref={videoRef}
             className="mx-auto max-h-[36vh] w-full object-cover object-[50%_12%] sm:max-h-[46vh] lg:max-h-[62vh]"
-            poster="/avatars/intro.jpg"
+            poster={publicUrl("/avatars/intro.jpg")}
             playsInline
             preload="auto"
             loop
@@ -66,7 +67,7 @@ function IntroAvatar() {
             onTimeUpdate={onTime}
             onClick={toggleSound}
           >
-            <source src="/media/intro.mp4" type="video/mp4" />
+            <source src={publicUrl("/media/intro.mp4")} type="video/mp4" />
           </video>
         )}
         {reduced ? null : (
