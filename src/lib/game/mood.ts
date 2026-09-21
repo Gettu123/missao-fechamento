@@ -1,48 +1,49 @@
+import { publicUrl } from "@/lib/public-url";
 import type { Mood, MoodAsset } from "./types";
 
 export const MOOD_ASSETS: Record<Mood, MoodAsset> = {
   welcome: {
-    still: "/avatars/key-user.jpg",
+    still: publicUrl("/avatars/key-user.jpg"),
     loop: false,
     line: "Ei, vamos embarcar em aventuras juntos?",
     glow: "sage",
   },
   idle: {
-    still: "/avatars/key-user.jpg",
+    still: publicUrl("/avatars/key-user.jpg"),
     loop: false,
     line: "Analise a trilha antes de responder.",
     glow: "sage",
   },
   thinking: {
-    still: "/avatars/thinking.jpg",
-    video: "/media/thinking.mp4",
+    still: publicUrl("/avatars/thinking.jpg"),
+    video: publicUrl("/media/thinking.mp4"),
     loop: true,
     line: "Hmm… de onde nasceu essa diferença?",
     glow: "sage",
   },
   waiting: {
-    still: "/avatars/waiting.jpg",
-    video: "/media/waiting.mp4",
+    still: publicUrl("/avatars/waiting.jpg"),
+    video: publicUrl("/media/waiting.mp4"),
     loop: true,
     line: "Tô esperando… o café esfria.",
     glow: "amber",
   },
   anxious: {
-    still: "/avatars/anxious.jpg",
+    still: publicUrl("/avatars/anxious.jpg"),
     loop: true,
     line: "Oh no! O fechamento não espera.",
     glow: "red",
   },
   correct: {
-    still: "/avatars/correct.jpg",
-    video: "/media/correct.mp4",
+    still: publicUrl("/avatars/correct.jpg"),
+    video: publicUrl("/media/correct.mp4"),
     loop: true,
     line: "Boa! Você encontrou a trilha.",
     glow: "green",
   },
   wrong: {
-    still: "/avatars/wrong.jpg",
-    video: "/media/wrong.mp4",
+    still: publicUrl("/avatars/wrong.jpg"),
+    video: publicUrl("/media/wrong.mp4"),
     loop: false,
     line: "Error! Não fecha. Volte à origem.",
     glow: "red",
@@ -73,18 +74,18 @@ export function rankFor(score: number) {
 }
 
 export const PRELOAD_STILLS = [
-  "/avatars/key-user.jpg",
-  "/avatars/idle.jpg",
-  "/avatars/thinking.jpg",
-  "/avatars/waiting.jpg",
-  "/avatars/anxious.jpg",
-  "/avatars/correct.jpg",
-  "/avatars/wrong.jpg",
+  publicUrl("/avatars/key-user.jpg"),
+  publicUrl("/avatars/idle.jpg"),
+  publicUrl("/avatars/thinking.jpg"),
+  publicUrl("/avatars/waiting.jpg"),
+  publicUrl("/avatars/anxious.jpg"),
+  publicUrl("/avatars/correct.jpg"),
+  publicUrl("/avatars/wrong.jpg"),
 ];
 
 export const PRELOAD_VIDEOS = [
-  "/media/thinking.mp4",
-  "/media/waiting.mp4",
-  "/media/correct.mp4",
-  "/media/wrong.mp4",
+  publicUrl("/media/thinking.mp4"),
+  publicUrl("/media/waiting.mp4"),
+  publicUrl("/media/correct.mp4"),
+  publicUrl("/media/wrong.mp4"),
 ];
