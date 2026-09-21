@@ -30,7 +30,7 @@ Oito fases da trilha **Rubrica → Determinação → Centro de custo → Benef�
 ## Como rodar
 
 ```bash
-git clone https://github.com/sander200/missao-fechamento.git
+git clone https://github.com/SEU-USUARIO/missao-fechamento.git
 cd missao-fechamento
 npm install
 npm run dev
