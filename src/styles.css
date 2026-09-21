@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f3eee4;
+  --color-surface: #fffaf3;
+  --color-elevated: #ffffff;
+  --color-fg: #2a3228;
+  --color-muted: #6a7464;
+  --color-subtle: #8a9286;
+  --color-border: #ddd4c4;
+  --color-accent: #5f7a4e;
+  --color-accent-fg: #f7f3ea;
+  --color-success: #2f7a4f;
+  --color-danger: #b54a3c;
+  --color-warn: #b07a1f;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    min-height: 100dvh;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
+
+.speech-enter {
+  animation: speech-in 280ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes speech-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .speech-enter {
+    animation: none;
+  }
+}
