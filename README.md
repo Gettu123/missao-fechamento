@@ -30,7 +30,7 @@ Oito fases da trilha **Rubrica → Determinação → Centro de custo → Benef�
 ## Como rodar
 
 ```bash
-git clone https://github.com/SEU-USUARIO/missao-fechamento.git
+git clone https://github.com/Gettu123/missao-fechamento.git
 cd missao-fechamento
 npm install
 npm run dev
@@ -38,9 +38,12 @@ npm run dev
 
 Abre em [http://localhost:8080](http://localhost:8080).
 
+Jogo publicado: [https://gettu123.github.io/missao-fechamento/](https://gettu123.github.io/missao-fechamento/)
+
 ```bash
-npm run build      # produção
-npm run typecheck  # TypeScript
+npm run build        # produção (Vercel / Node)
+npm run build:pages  # estático para GitHub Pages
+npm run typecheck
 ```
 
 Sem login e sem banco: o placar usa `localStorage`.
